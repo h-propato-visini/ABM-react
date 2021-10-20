@@ -1,7 +1,6 @@
 import React from "react";
 import './style.scss'
 import { Link } from 'react-router-dom'
-import Modificar from '../Modificar'
 
 class Users extends React.Component {
     constructor(props) {
@@ -26,15 +25,22 @@ class Users extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className='userContainer'>
+                <span className='userList'>Listado de usuarios: </span>
+                <Link style={{textDecoration:'none', margin: '30px'}} to='/add'>Agregar Usuario</Link>
+                <ul className='userContainer'>
                     {this.state.users.map((data, key)=> {
                         return (
-                            <div>
-                                {data.name} {data.surname} <Link style={{textDecoration:'none'}} to={`/modify/${data.id}`}><button>Editar</button></Link>
-                            </div> //1:55
+                            <li key={key}>
+                                {data.name} {data.surname} 
+                                <Link 
+                                    style={{textDecoration:'none'}} to={`/modify/${data.id}`}
+                                >
+                                    <button>Editar</button>
+                                </Link>
+                            </li>
                         )
                     })}
-                </div>
+                </ul>
             </React.Fragment>
         )
     }

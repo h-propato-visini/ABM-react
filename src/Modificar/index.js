@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.scss'
 import Input from '../Input'
+import {Link} from 'react-router-dom'
 
 class Modificar extends React.Component {
     constructor(props) {
@@ -66,6 +67,7 @@ class Modificar extends React.Component {
                 <div>
                     <button className='changeButton' onClick={()=> {this.handleClick()}}>Modificar</button>
                 </div>
+                <Link to='/' style={{margin: '15px'}}>Ver Usuarios</Link>
             </React.Fragment>
         )
     }

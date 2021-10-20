@@ -3,8 +3,8 @@ import './style.scss'
 
 class Button extends React.Component {
 
-    async handleClick(Data) {
-        const Datos = this.props.Data
+    async handleClick() {
+        let Datos = this.props.Data
         if (Datos.name != '' && Datos.surname != '' && Datos.age != '') {
             const sendData = await fetch ('http://localhost:3001/add', {
                 method: 'POST',

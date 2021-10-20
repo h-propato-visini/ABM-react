@@ -1,7 +1,21 @@
+.userList {
+    margin: 30px;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
 .userContainer {
     margin: 10px;
+
     .userSpan {
         font-size: 20px;
         font-weight: bold;
+    }
+
+    button {
+        margin-left: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 20px 10px;
     }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import './style.scss'
 import Input from '../Input'
 import Button from '../Button'
+import {Link} from 'react-router-dom'
 
 class Agregar extends React.Component {
     constructor(props) {
@@ -35,14 +36,17 @@ class Agregar extends React.Component {
                     <p>Edad</p>
                     <Input name='age' changeCallback={(data, name)=>{this.handleCallback(data, name)}}/>
                 </div>
-                <Button Data={this.state} 
-                    action='Guardar'
-                    backColor='rgb(78, 4, 78)'
-                    color='white'
-                    border='none'
-                    width='150px'
-                    height='30px'
-                />
+                <div>
+                    <Button Data={this.state} 
+                        action='Guardar'
+                        backColor='rgb(78, 4, 78)'
+                        color='white'
+                        border='none'
+                        width='150px'
+                        height='30px'
+                    />
+                </div>
+                <Link to='/' style={{margin: '15px'}}>Ver Usuarios</Link>
             </React.Fragment> //51:17
         )
     }
